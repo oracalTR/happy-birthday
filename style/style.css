@@ -1,0 +1,113 @@
+ @font-face {
+    font-family: 'Bad Script';
+    font-weight: 400;
+    src: url('../fonts/bad-script-v16-latin_cyrillic-regular.woff2') format('woff2'),
+        url('../fonts/bad-script-v16-latin_cyrillic-regular.woff') format('woff');
+
+ }
+ @font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    src: url('../fonts/open-sans-v29-latin_cyrillic-regular.woff2') format('woff2'),
+        url('../fonts/open-sans-v29-latin_cyrillic-regular.woff') format('woff');
+
+ }
+ @font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    src: url('../fonts/open-sans-v29-latin_cyrillic-700.woff2') format('woff2'),
+        url('../fonts/open-sans-v29-latin_cyrillic-700.woff') format('woff');
+
+ }
+
+ html {
+    box-sizing: border-box;
+ }
+
+ * {
+    box-sizing: inherit;
+ }
+
+ body {
+    font-family: 'Open Sans';
+    background: #FFF1F8;
+ }
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 90px;
+}
+
+.header__container {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0px 1px 20px rgba(72, 3, 38, 0.07);
+}
+
+.header__button-change {
+    padding: 0;
+    cursor: pointer;
+    width: 300px;
+    height: 65px;
+    font-weight: 700;
+    font-size: 18px;
+    background: #C300C7;
+    border-radius: 30px;
+    color: #fff;
+    border: none;
+    margin-right: 30px;
+}
+
+.header__button-change:last-child {
+    margin-right: 0;
+}
+
+.header__button-gender {
+    cursor: pointer;
+    padding: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+
+.header__button-gender:first-child {
+    margin-left: 0;
+}
+
+.header__button-gender_men {
+    border: 2px solid #1178B3;
+}
+
+.header__button-gender_woman {
+    border: 2px solid #C300C7;
+}
+
+.card__image {
+    height: 520px;
+    max-width: 840px;
+    margin: 32px auto;
+    display: block;
+    background: url('../img/card-w-01.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__image-text {
+    font-family: 'Bad Script';
+    width: 231px;
+    height: 315px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 35px;
+    color: #000000;
+}
