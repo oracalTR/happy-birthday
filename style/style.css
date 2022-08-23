@@ -40,6 +40,15 @@
     justify-content: space-between;
  }
 
+ 
+.man {
+    background: #EFF9FE;
+}
+    
+.woman {
+    background: #FFF1F8;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -69,18 +78,29 @@
     height: 65px;
     font-weight: 700;
     font-size: 18px;
-    background: #C300C7;
     border-radius: 30px;
     color: #fff;
     border: none;
     margin-right: 30px;
 }
-.header__button-change:hover {
-    background: #da22dd;
-}
 
 .header__button-change:last-child {
     margin-right: 0;
+}
+
+.header__button-change-man {
+    background: #1178B2;
+}
+
+.header__button-change-woman {
+    background: #C300C7;
+}
+.header__button-change-man:hover {
+    background: #1eb1fa;
+}
+
+.header__button-change-woman:hover {
+    background: #ff42a0;
 }
 
 .header__button-gender {
@@ -89,16 +109,25 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.04);
     border-radius: 10px;
-    margin-left: 20px;
+    margin-right: 20px;
     padding: 10px;
     border: 2px solid transparent;
 }
 
-.header__button-gender:first-child {
-    margin-left: 0;
+.header__button-gender:last-child {
+    margin-right: 0;
 }
 
-.header__button-gender_men:hover {
+
+.header__button-gender_man:hover {
+    border: 2px solid #1178B3;
+}
+
+.header__button-gender_man:hover {
+    border: 2px solid #1178B3;
+}
+
+.header__button-gender_man-active {
     border: 2px solid #1178B3;
 }
 
@@ -106,7 +135,8 @@
     border: 2px solid #C300C7;
 }
 
-.card {
+.header__button-gender_woman-active {
+    border: 2px solid #C300C7;
 }
 
 .card__container {
@@ -116,15 +146,15 @@
 
 .card__wrapper {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
 .card__image {
-    display: block;
     max-width: 100%;
     height: auto;
-    margin: 32px auto;
-    margin-bottom: 8px;
+    padding: 32px 0 8px;
 }
 
 .card__image-text {
@@ -157,8 +187,14 @@
     font-size: 16px;
     line-height: 22px;  
 }
+.footer__container__wrap-copyright p {
+    margin: 0;
+    margin-bottom: 8px;
+}
 
 .footer__container__wrap-social {
+    margin: 0;
+    padding: 0;
     list-style: none;
     display: flex;
     gap: 16px;
