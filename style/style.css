@@ -161,8 +161,8 @@
     position: absolute;
     margin: 0;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 52%;
+    transform: translate(-50%, -48%);
     font-family: 'Bad Script';
     font-style: italic;
     font-weight: 400;
@@ -171,6 +171,17 @@
     color: #000000;
     font-size: max(3.2em, min(calc(100vw * 3 / 140), 6em));
     line-height: max(1.3em, min(calc(100vw * 3 / 140), 4em));
+}
+.woman .card__image-text {
+    font-family: 'Bad Script';
+    font-style: italic;
+    font-weight: 400;
+}
+
+.man .card__image-text {
+    font-family: 'Open Sans';
+    font-size: max(2.5em, min(calc(100vw * 3 / 140), 6em));
+    font-weight: 700;
 }
 
 .footer__container {
@@ -200,10 +211,26 @@
     gap: 16px;
 }
 
-.footer__container__wrap-social li:hover{
+.man .footer__container__wrap-social li a svg {
+    color: #1178B2;
+}
+
+.woman .footer__container__wrap-social li a svg {
+    color: #C300C7;
+}
+
+.man .footer__container__wrap-social li a svg:hover {
+    color: #1eb1fa;
+}
+
+.woman .footer__container__wrap-social li a svg:hover {
+    color: #ff42a0;
+}
+
+/* .footer__container__wrap-social li:hover{
     background: rgba(0, 0, 0, 0.3);
     border-radius: 50%;
-}
+} */
 
 @media (max-width: 990px) {
     .container {
