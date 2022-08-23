@@ -1,6 +1,7 @@
  @font-face {
     font-family: 'Bad Script';
     font-weight: 400;
+    font-display: swap;
     src: url('../fonts/bad-script-v16-latin_cyrillic-regular.woff2') format('woff2'),
         url('../fonts/bad-script-v16-latin_cyrillic-regular.woff') format('woff');
 
@@ -8,6 +9,7 @@
  @font-face {
     font-family: 'Open Sans';
     font-weight: 400;
+    font-display: swap;
     src: url('../fonts/open-sans-v29-latin_cyrillic-regular.woff2') format('woff2'),
         url('../fonts/open-sans-v29-latin_cyrillic-regular.woff') format('woff');
 
@@ -15,6 +17,7 @@
  @font-face {
     font-family: 'Open Sans';
     font-weight: 700;
+    font-display: swap;
     src: url('../fonts/open-sans-v29-latin_cyrillic-700.woff2') format('woff2'),
         url('../fonts/open-sans-v29-latin_cyrillic-700.woff') format('woff');
 
@@ -31,12 +34,22 @@
  body {
     font-family: 'Open Sans';
     background: #FFF1F8;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
  }
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 90px;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    z-index: 1;
 }
 
 .header__container {
@@ -62,6 +75,9 @@
     border: none;
     margin-right: 30px;
 }
+.header__button-change:hover {
+    background: #da22dd;
+}
 
 .header__button-change:last-child {
     margin-right: 0;
@@ -75,39 +91,87 @@
     border-radius: 10px;
     margin-left: 20px;
     padding: 10px;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
 }
 
 .header__button-gender:first-child {
     margin-left: 0;
 }
 
-.header__button-gender_men {
+.header__button-gender_men:hover {
     border: 2px solid #1178B3;
 }
 
-.header__button-gender_woman {
+.header__button-gender_woman:hover {
     border: 2px solid #C300C7;
 }
 
+.card {
+}
+
+.card__container {
+    filter: drop-shadow(0px 0px 50px rgba(96, 4, 50, 0.23));
+    font-size: 4px;
+}
+
+.card__wrapper {
+    position: relative;
+    width: 100%;
+}
+
 .card__image {
-    height: 520px;
-    max-width: 840px;
-    margin: 32px auto;
     display: block;
-    background: url('../img/card-w-01.jpg');
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    margin: 32px auto;
 }
 
 .card__image-text {
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Bad Script';
-    width: 231px;
-    height: 315px;
     font-style: italic;
     font-weight: 400;
+    line-height: 18px;
     font-size: 18px;
-    line-height: 35px;
     color: #000000;
+    font-size: max(3.2em, min(calc(100vw * 3 / 140), 6em));
+    line-height: max(1.3em, min(calc(100vw * 3 / 140), 4em));
+}
+
+@media (max-width: 990px) {
+    .container {
+        padding: 0 30px;
+    }
+    .header__container {
+        padding: 0;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .header__button-wrapper {
+        margin: 16px 0;
+    }
+    .header__button-change {
+        width: 250px;
+        font-size: 14px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 570px) {
+    .header__button-wrapper:first-child {
+        display: flex;
+        width: 95%;
+        gap: 10px;
+    }
+    .header__button-change {
+        width: 100%;
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
 }
