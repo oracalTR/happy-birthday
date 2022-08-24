@@ -57,11 +57,14 @@ const getRandomInt = (name, min, max) => {
 const painCardContent = () => {
     cardWrapper.innerHTML = '';
     cardWrapper.insertAdjacentHTML('beforeend', `
-        <img class="card__image" src="../img/${state.photo[state.randomNumPhoto]}" alt="Фон открытки">
-        <p class="card__image-text">
-            ${state.text[state.randomNumText]}
-        </p>
-    `);
+    <img class="card__image" src="../img/${state.photo[state.randomNumPhoto]}" alt="Фон открытки">
+    <p class="card__image-text" width="840" height="520">
+    ${state.text[state.randomNumText].replaceAll('\n', '<br>')}
+    </p>    
+`);
+    if(state.photo[state.randomNumPhoto].includes('black')) {
+        cardWrapper.querySelector('.card__image-text').style.color = '#fff';
+    };
 }
 
 const paintCardContentImage = (photo) => {
