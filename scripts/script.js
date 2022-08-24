@@ -62,6 +62,7 @@ const painCardContent = () => {
     ${state.text[state.randomNumText].replaceAll('\n', '<br>')}
     </p>    
 `);
+
     if(state.photo[state.randomNumPhoto].includes('black')) {
         cardWrapper.querySelector('.card__image-text').style.color = '#fff';
     };

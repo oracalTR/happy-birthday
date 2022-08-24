@@ -65,6 +65,8 @@ a {
 .header {
     position: relative;
     display: flex;
+    background: #fff;
+    box-shadow: 0px 1px 20px rgba(72, 3, 38, 0.07);
     z-index: 1;
 }
 
@@ -74,8 +76,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    box-shadow: 0px 1px 20px rgba(72, 3, 38, 0.07);
 }
 
 .header__button-change {
@@ -151,6 +151,9 @@ a {
 .card__container {
     filter: drop-shadow(0px 0px 50px rgba(96, 4, 50, 0.23));
     font-size: 4px;
+}
+.card {
+    flex-grow: 1;
 }
 
 .card__wrapper {
